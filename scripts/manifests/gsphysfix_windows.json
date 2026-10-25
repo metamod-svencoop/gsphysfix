@@ -1,0 +1,24 @@
+{
+    "schemaVersion": 1,
+    "name": "gsphysfix_windows",
+    "gameVersions": [
+        "hl-3248",
+        "hl-3266",
+        "hl-3329",
+        "hl-3647",
+        "hl-4554",
+        "hl-6153",
+        "hl-8684",
+        "hl-10210",
+        "cof-5936",
+        "svencoop-8948",
+        "svencoop-10257"
+    ],
+    "platforms": ["windows"],
+    "symbols": {
+        "engine": {
+            "SV_CopyEdictToPhysent": "function",
+            "sv_models": "global"
+        }
+    }
+}

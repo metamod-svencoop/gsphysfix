@@ -1,0 +1,37 @@
+{
+    "schemaVersion": 1,
+    "name": "gsphysfix_linux",
+    "gameVersions": ["hl-8684", "hl-10210", "svencoop-8948", "svencoop-10257"],
+    "platforms": ["linux"],
+    "symbols": {
+        "engine": {
+            "sv_models": "global"
+        }
+    },
+    "conditionalGroups": [
+        {
+            "when": ["hl-8684"],
+            "symbols": {
+                "engine": {
+                    "SV_CopyEdictToPhysent": "function",
+                    "_Z21SV_CopyEdictToPhysentP9physent_siP7edict_s": "function"
+                }
+            }
+        },
+        {
+            "when": ["hl-10210", "svencoop-8948", "svencoop-10257"],
+            "symbols": {
+                "engine": {
+                    "SV_AddLinksToPM_": "function",
+                    "_Z16SV_AddLinksToPM_P10areanode_sPfS1_": "function",
+                    "pmove": "global",
+                    "build_number": "function"
+                }
+            }
+        }
+    ],
+    "alternativeGroups": [
+        ["SV_CopyEdictToPhysent", "_Z21SV_CopyEdictToPhysentP9physent_siP7edict_s"],
+        ["SV_AddLinksToPM_", "_Z16SV_AddLinksToPM_P10areanode_sPfS1_"]
+    ]
+}
